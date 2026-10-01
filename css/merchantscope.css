@@ -36,33 +36,34 @@
 .ms__top { display: flex; align-items: center; justify-content: space-between; gap: 32px 60px; flex-wrap: wrap; margin-bottom: clamp(36px, 5vw, 64px); }
 .ms__top .ms__title { margin: 0; }
 
-/* the credit: whose idea it was. A glass plate, his name in gold that a light
-   crosses now and then, and sparkles twinkling round it on their own clocks. */
+/* the credit: whose idea it was. A quiet glass plate, his name in a muted gold that
+   a soft light crosses now and then, and sparkles twinkling round it on their own clocks.
+   Toned down on the user's note: upright, the site's sans, smaller, less glow. */
 .ms__credit {
   position: relative; margin: 0 clamp(0px, 4vw, 60px) 0 0; display: grid; justify-items: center; gap: 4px; text-align: center;
   padding: 22px 34px 20px; border-radius: 22px;
-  background: linear-gradient(150deg, rgba(251, 191, 36, .1), rgba(255, 255, 255, .03) 45%, rgba(var(--ms-glow), .08));
-  -webkit-backdrop-filter: blur(16px) saturate(150%); backdrop-filter: blur(16px) saturate(150%);
-  box-shadow: inset 0 0 0 1px rgba(252, 211, 77, .28), inset 0 1px 0 rgba(255, 255, 255, .18), 0 0 60px rgba(251, 191, 36, .14), 0 24px 60px rgba(0, 0, 0, .35);
+  background: linear-gradient(150deg, rgba(201, 164, 102, .06), rgba(255, 255, 255, .025) 45%, rgba(var(--ms-glow), .04));
+  -webkit-backdrop-filter: blur(16px) saturate(130%); backdrop-filter: blur(16px) saturate(130%);
+  box-shadow: inset 0 0 0 1px rgba(201, 164, 102, .2), inset 0 1px 0 rgba(255, 255, 255, .1), 0 24px 60px rgba(0, 0, 0, .3);
 }
 .ms__credit::before { /* the warm light behind the plate */
   content: ""; position: absolute; inset: -40% -25%; z-index: -1; pointer-events: none; border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(251, 191, 36, .22), transparent 70%); filter: blur(10px);
+  background: radial-gradient(closest-side, rgba(201, 164, 102, .08), transparent 70%); filter: blur(10px);
 }
-.ms__credit-k, .ms__credit-r { font-family: var(--mono); font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: #fcd34d; opacity: .85; }
+.ms__credit-k, .ms__credit-r { font-family: var(--mono); font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: #c9a466; opacity: .8; }
 .ms__credit-r { letter-spacing: .08em; text-transform: none; font-size: .72rem; color: var(--cream-2); opacity: .9; }
 .ms__credit-name {
-  font-family: var(--serif); font-style: italic; font-size: clamp(2rem, 3.4vw, 3.1rem); line-height: 1.05; padding: 0 .08em;
-  background: linear-gradient(100deg, #fde68a 0%, #f59e0b 30%, #fff7d6 48%, #f59e0b 62%, #fbbf24 100%) 0 0 / 250% 100%;
+  font-family: var(--display); font-weight: 600; font-size: clamp(1.45rem, 2.3vw, 2.05rem); line-height: 1.1; letter-spacing: -.02em; padding: 0 .04em;
+  background: linear-gradient(100deg, #d9c49a 0%, #c9a466 35%, #e6d6b0 50%, #c9a466 65%, #d4b47a 100%) 0 0 / 250% 100%;
   -webkit-background-clip: text; background-clip: text; color: transparent;
-  filter: drop-shadow(0 4px 24px rgba(251, 191, 36, .45));
+  filter: drop-shadow(0 2px 10px rgba(201, 164, 102, .18));
 }
 /* sparkles: four-point stars, each placed round the plate and twinkling on its own beat */
 .ms__credit i {
   position: absolute; width: var(--s, 14px); height: var(--s, 14px); pointer-events: none;
   background: radial-gradient(circle, #fff 0 18%, #fde68a 30%, transparent 62%);
   clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
-  filter: drop-shadow(0 0 6px rgba(253, 230, 138, .95));
+  filter: drop-shadow(0 0 4px rgba(230, 214, 176, .6));
 }
 .ms__credit i:nth-of-type(1) { --s: 22px; left: -10px;  top: 10%;  --d: 0s; }
 .ms__credit i:nth-of-type(2) { --s: 13px; left: 18%;   top: -8px; --d: .7s; }
